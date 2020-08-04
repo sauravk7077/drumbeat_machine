@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Container from "./Components/Container";
 
 class App extends React.Component{
     render() {
-        return <h1>Drum Machine</h1>
+        return (
+            <div id="drum-machine">
+                <Container/>
+            </div>
+        )
     }
 }
 
