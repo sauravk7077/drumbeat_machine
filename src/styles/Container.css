@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Unica+One&display=swap');
 
 #display{
     display: flex;
-    border: 1px solid #000;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom,#fff 0%, #cecece 15%, #cecece 97%, #000 100%);
+    border: 1px solid #000;
+    border-bottom: none;
 }
 
 
@@ -12,7 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #aaa;
+    border: 1px solid #9c9c9c;
+    border-radius: 5px;
     margin: 10px;
     padding: 10px;
 }
@@ -34,9 +38,46 @@
     margin: 10px;
 }
 
+button{
+    position: relative;
+    outline: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(212,212,212,1) 20%, rgba(212,212,212,1) 95%, rgba(0,0,0,1) 100%);
+    transition: all 100ms;
+    box-shadow: rgba(85, 85, 85, 0.5) 0 0 2px 1px;
+    font-family: 'Unica One', cursive;
+    font-weight: 800;
+}
+
+button:active{
+    left: 1px;
+    top: 1px;
+    outline: none;
+}
+
+.controls > button{
+    width: 40px;
+    height: 40px;
+    box-sizing: content-box;
+    font-size: 0.7em;
+    margin: 5px;
+}
+
 #screen{
+    width: 80%;
+    font-family: 'Press Start 2P', cursive;
+    font-size:  0.5em;
+    color: #2b362e;
     margin: 10px auto;
     height: 40px;
     text-align: center;
     display: block;
+    border: none;
+    outline: none;
+    background: linear-gradient(to bottom, #fff 0%,#BDECCA 2%, #BDECCA 90%, #2b362e 100%);
+    box-shadow: #445548 0 0 4px 2px inset;
 }
+#screen:disabled{
+    background: linear-gradient(to bottom, #fff 0%,#8db197 2%, #8db197 90%, #2b362e 100%);
+    color: transparent;
+}
+

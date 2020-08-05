@@ -6,6 +6,7 @@ class Button extends React.Component{
         this.handleClick = this.handleClick.bind(this);
         this.playSound = this.playSound.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
+        this.reloadTrack = this.reloadTrack.bind(this);
     }
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyPress);
@@ -30,12 +31,18 @@ class Button extends React.Component{
             audio.play();
         this.props.onClick();
     }
+
+    reloadTrack() {
+        let audio = document.getElementById(this.props.data.keyCode).firstElementChild
+        audio.load();
+        audio.play();
+    }
     render() {
+        let src = this.props.mode === 'drum'? "./audio/drum/": "./audio/electric/"
         const {keyCode, fileName, name} = this.props.data;
         return (
-            <button data-name={this.props.name} className="drum-pad" id={keyCode} onClick={this.handleClick} disabled={this.props.disabled}>{keyCode}
-                <audio>
-                    <source src={`./audio/drum/${fileName}`}/>
+            <button data-name={name} className="drum-pad" id={keyCode} onClick={this.handleClick} disabled={this.props.disabled}>{keyCode}
+                <audio onChange={this.reloadTrack} src={`${src}${fileName}`}>
                 </audio>
             </button>
         )

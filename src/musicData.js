@@ -49,49 +49,49 @@ export const drum = [
 
 export const misc = [
     {
-        name: "Heater 1",
-        keyCode: "K",
-        fileName: "HEATER-1.mp3"
+        name: "Arc Welder",
+        keyCode: "Q",
+        fileName: "arc1.mp3"
     },
     {
-        name: "Heater 2",
+        name: "Electric",
         keyCode: "W",
-        fileName: "HEATER-2.mp3"
+        fileName: "Electic.mp3"
     },
     {
-        name: "Heater 3",
+        name: "Electric Drill",
         keyCode: "E",
-        fileName: "HEATER-3.mp3"
+        fileName: "electricdrill.mp3"
     },
     {
-        name: "Heater 4",
+        name: "Electric Guitar",
         keyCode: "A",
-        fileName: "HEATER-4_1.mp3"
+        fileName: "electricguitar.mp3"
     },
     {
-        name: "Clap",
+        name: "E Spark",
         keyCode: "S",
-        fileName: "HEATER-6.mp3"
+        fileName: "espark.mp3"
     },
     {
-        name: "Open HH",
+        name: "Typing",
         keyCode: "D",
-        fileName: "Dsc_Oh.mp3"
+        fileName: "key7.mp3"
     },
     {
-        name: "Kick n' Hat",
+        name: "Keyboard",
         keyCode: "Z",
-        fileName: "Kick_n_Hat.mp3"
+        fileName: "keyboard3.mp3"
     },
     {
-        name: "Kick",
+        name: "Meccanno",
         keyCode: "X",
-        fileName: "RP4_KICK_1.mp3"
+        fileName: "Meccano_Clockwork_Motor_Running_3sec.mp3"
     },
     {
-        name: "Closed HH",
+        name: "Printer",
         keyCode: "C",
-        fileName: "Cev_H2.mp3"
+        fileName: "Printer05.mp3"
     }
     
 ]

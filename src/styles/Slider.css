@@ -1,21 +1,32 @@
-input[type=range] {
-    -webkit-appearance: slider-vertical; /* Hides the slider so that custom slider can be made */
-    background: transparent; /* Otherwise white in Chrome */
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-  }
-  
-  input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+.slider {
+   -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 10px;
+    background: linear-gradient(to bottom,#fff 0%, #eeeeee 45%,#383838 50%, #eeeeee 55%, #fff 100%);
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
   }
 
-input[type=range]::-ms-track {
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg,#fff 0%, #aaaaaa 45%, #aaaaaa 90%, #000 100%);
+    box-shadow: rgb(173, 173, 173) 1px 1px 2px 2px ,rgb(71, 71, 71) 0 0 2px 2px inset;
     cursor: pointer;
-  
-    /* Hides the slider so custom styles can be added */
-    background: transparent; 
-    border-color: transparent;
-    color: transparent;
+  }
+
+  .slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    background: red;
+    cursor: pointer;
   }

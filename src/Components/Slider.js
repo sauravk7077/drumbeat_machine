@@ -19,7 +19,7 @@ class Slider extends React.Component {
 
     render() {
         return (
-            <input type="range" min="0" max="100" value={this.state.value} step="1" orient="vertical" onChange={this.handeChange}/>
+            <input className="slider" type="range" min="0" max="100" value={this.state.value} step="1" orient="vertical" onChange={this.handeChange}/>
         )
     }
 }

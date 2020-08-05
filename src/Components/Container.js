@@ -15,10 +15,10 @@ class Container extends React.Component{
             mode: "drum",
             display: ""
         }
-        this.ref = React.createRef();
         this.handlePower = this.handlePower.bind(this);
         this.handleVolume = this.handleVolume.bind(this);
         this.clickDrumPad = this.clickDrumPad.bind(this);
+        this.changeMode = this.changeMode.bind(this);
     }
     handlePower() {
         let screenText = ! this.state.power?"Power OFF":"Power ON";
@@ -30,9 +30,15 @@ class Container extends React.Component{
     }
     handleVolume(e) {
         this.setState({
-            display: `Volume ${e.target.value}`,
+            display: `Volume ${e.target.value}%`,
             volume: e.target.value
         })
+    }
+    changeMode(e) {
+        this.setState(s=>({
+            disabled: `${this.state.mode.toUpperCase()} MODE`,
+            mode: s.mode === 'drum'? 'electric': 'drum'
+        }));
     }
 
     clickDrumPad(id) {
@@ -47,16 +53,17 @@ class Container extends React.Component{
                 volume={this.state.volume}
                 data={e}disabled={this.state.power}
                 onClick={()=> {this.clickDrumPad(e.keyCode)}}
-                name={e.name}
+                mode={this.state.mode}
             />
         ));
         return(
             <div id="display">
                 <div className="btnGroup">{buttons}</div>
                 <div className="screenBox">
-                    <Screen value={this.state.display}/>
+                    <Screen disabled={this.state.power} value={this.state.display}/>
                     <div className="controls">
-                        <button onClick={this.handlePower}><i class="fas fa-power-off"></i></button>
+                        <button onClick={this.handlePower}><i className="fas fa-power-off"></i></button>
+                        <button onClick={this.changeMode}>{this.state.mode}</button>
                         <Slider onChange={this.handleVolume}/>
                     </div>
                 </div>
