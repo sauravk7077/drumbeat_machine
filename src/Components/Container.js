@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "./Slider";
 import Button from "./Button";
 import Screen from "./Screen";
+import "../../node_modules/@fortawesome/fontawesome-free/css/all.css"
 import {drum, misc} from "../musicData";
 import "../styles/Container.css";
 
@@ -51,11 +52,11 @@ class Container extends React.Component{
         ));
         return(
             <div id="display">
-                <div className="screenBox"><Screen value={this.state.display}/></div>
-                <div className="boxControl">
-                    <div className="btnGroup">{buttons}</div>
+                <div className="btnGroup">{buttons}</div>
+                <div className="screenBox">
+                    <Screen value={this.state.display}/>
                     <div className="controls">
-                        <button onClick={this.handlePower}>Power</button>
+                        <button onClick={this.handlePower}><i class="fas fa-power-off"></i></button>
                         <Slider onChange={this.handleVolume}/>
                     </div>
                 </div>

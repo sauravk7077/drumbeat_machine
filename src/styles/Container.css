@@ -1,18 +1,20 @@
 
 #display{
     display: flex;
-    flex-direction: column;
+    border: 1px solid #000;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.boxControl{
-    display: flex;
-
-}
 
 .controls{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #aaa;
+    margin: 10px;
+    padding: 10px;
 }
 
 .btnGroup{
@@ -22,6 +24,8 @@
     width: 200px;
     justify-content: center;
     align-items: center;
+    border: 1px solid #aaa;
+    margin: 10px;
 }
 
 .drum-pad{
@@ -31,7 +35,8 @@
 }
 
 #screen{
-    width: 100%;
+    margin: 10px auto;
     height: 40px;
     text-align: center;
+    display: block;
 }
