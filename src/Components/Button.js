@@ -19,21 +19,22 @@ class Button extends React.Component{
     componentWillUnmount() {
         document.removeEventListener('keydown', this.handleKeyPress)
     }
-    handleClick(){
+    handleClick(e){
         this.playSound();
     }
     playSound() {
-        let audio = document.getElementById(this.props.data.keyCode);
+        let audio = document.getElementById(this.props.data.keyCode).firstElementChild;
         audio.volume = 0.01 * this.props.volume;
         audio.currentTime = 0;
         if(!this.props.disabled)
             audio.play();
+        this.props.onClick();
     }
     render() {
         const {keyCode, fileName, name} = this.props.data;
         return (
-            <button className="drum-pad" onClick={this.handleClick} disabled={this.props.disabled}>{keyCode}
-                <audio id={keyCode}>
+            <button data-name={this.props.name} className="drum-pad" id={keyCode} onClick={this.handleClick} disabled={this.props.disabled}>{keyCode}
+                <audio>
                     <source src={`./audio/drum/${fileName}`}/>
                 </audio>
             </button>
