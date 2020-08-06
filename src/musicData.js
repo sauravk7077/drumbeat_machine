@@ -2,27 +2,27 @@ export const drum = [
     {
         name: "Heater 1",
         keyCode: "Q",
-        fileName: "HEATER-1.mp3"
+        fileName: "Heater-1.mp3"
     },
     {
         name: "Heater 2",
         keyCode: "W",
-        fileName: "HEATER-2.mp3"
+        fileName: "Heater-2.mp3"
     },
     {
         name: "Heater 3",
         keyCode: "E",
-        fileName: "HEATER-3.mp3"
+        fileName: "Heater-3.mp3"
     },
     {
         name: "Heater 4",
         keyCode: "A",
-        fileName: "HEATER-4_1.mp3"
+        fileName: "Heater-4_1.mp3"
     },
     {
         name: "Clap",
         keyCode: "S",
-        fileName: "HEATER-6.mp3"
+        fileName: "Heater-6.mp3"
     },
     {
         name: "Open HH",
@@ -56,7 +56,7 @@ export const misc = [
     {
         name: "Electric",
         keyCode: "W",
-        fileName: "Electic.mp3"
+        fileName: "Electric.mp3"
     },
     {
         name: "Electric Drill",
